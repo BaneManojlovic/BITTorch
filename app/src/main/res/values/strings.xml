@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BIT Torch</string>
+    <string name="buttonOnTorch">Button On Torch</string>
 </resources>
