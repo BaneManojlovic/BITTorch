@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">BIT Torch</string>
     <string name="buttonOnTorch">Button On Torch</string>
+    <string name="frontPart">Front part</string>
+    <string name="lamp">lamp</string>
+    <string name="name_version">BIT Torch v1.0.0</string>
 </resources>
+
