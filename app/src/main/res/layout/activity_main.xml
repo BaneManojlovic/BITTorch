@@ -15,14 +15,15 @@
         android:contentDescription="@string/frontPart" />
 
     <ImageView
-        android:id="@+id/imageViewLamp"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:id="@+id/imageViewBulb"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="128dp"
-        android:background="@drawable/picton"
-        android:contentDescription="@string/lamp" />
+        android:background="@color/colorBackground"
+        android:contentDescription="@string/lamp"
+        android:src="@drawable/lightbulb_on" />
 
     <ImageView
         android:id="@+id/btnImageView"
@@ -31,6 +32,7 @@
         android:layout_centerInParent="true"
         android:background="@color/colorBackground"
         android:contentDescription="@string/buttonOnTorch"
+        android:onClick="flash"
         android:src="@drawable/btnon" />
 
     <TextView
@@ -38,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:textAlignment="center"
-        android:text="@string/name_version"/>
+        android:text="@string/name_version"
+        android:textAlignment="center" />
 
 </RelativeLayout>
