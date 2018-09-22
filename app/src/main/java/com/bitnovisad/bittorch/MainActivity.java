@@ -25,10 +25,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //initialization of button
+        //initialization of image button
         btn = (ImageView) findViewById(R.id.btnImageView);
 
-        //initialication of lightbulb
+        //initialication of lightbulb image
         bulb = (ImageView) findViewById(R.id.imageViewBulb);
 
         //initialization of camera manager
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    //method for setting button images on/off
+    //method for setting button images on/off and calling turn On/Off methods
     public void flash(View view) {
         if (!isOn) {
             btn.setImageResource(R.drawable.btnon);
