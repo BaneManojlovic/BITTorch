@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/imageViewFrontPart"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="80dp"
         android:background="@drawable/grid3"
         android:contentDescription="@string/frontPart" />
 
@@ -23,7 +23,7 @@
         android:layout_marginTop="128dp"
         android:background="@color/colorBackground"
         android:contentDescription="@string/lamp"
-        android:src="@drawable/lightbulb_on" />
+        android:src="@drawable/arton" />
 
     <ImageView
         android:id="@+id/btnImageView"

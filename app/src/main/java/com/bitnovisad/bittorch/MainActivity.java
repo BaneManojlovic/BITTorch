@@ -49,12 +49,12 @@ public class MainActivity extends AppCompatActivity {
     public void flash(View view) {
         if (!isOn) {
             btn.setImageResource(R.drawable.btnon);
-            bulb.setImageResource(R.drawable.lightbulb_on);
+            bulb.setImageResource(R.drawable.arton);
             isOn = true;
             turnOnFlashlight();
         } else {
             btn.setImageResource(R.drawable.btnoff);
-            bulb.setImageResource(R.drawable.lightbulb_off);
+            bulb.setImageResource(R.drawable.artoff);
             isOn = false;
             turnOffFlashlight();
         }
