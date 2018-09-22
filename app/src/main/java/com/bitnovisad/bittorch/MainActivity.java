@@ -8,6 +8,7 @@ import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
@@ -15,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ImageView btn;
     private ImageView bulb;
-    private boolean isOn = false;
+    private boolean isOn = true;
     private CameraManager manager;
     private String cameraId;
     private MediaPlayer mp;
@@ -26,10 +27,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //initialization of image button
-        btn = (ImageView) findViewById(R.id.btnImageView);
+        btn = findViewById(R.id.btnImageView);
 
         //initialication of lightbulb image
-        bulb = (ImageView) findViewById(R.id.imageViewBulb);
+        bulb = findViewById(R.id.imageViewBulb);
 
         //initialization of camera manager
         manager = (CameraManager) getSystemService(Context.CAMERA_SERVICE);
@@ -37,9 +38,13 @@ public class MainActivity extends AppCompatActivity {
         //initialization of media player for playing sounds
         mp = MediaPlayer.create(this, R.raw.btnclick);
 
+        //initally set torch in ON mode
         try {
             cameraId = manager.getCameraIdList()[0];
-            turnOnFlashlight();
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                mp.start();
+                manager.setTorchMode(cameraId, true);
+            }
         } catch (CameraAccessException e) {
             e.printStackTrace();
         }
