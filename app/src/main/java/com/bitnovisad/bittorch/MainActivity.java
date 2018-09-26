@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import com.testfairy.TestFairy;
+
 public class MainActivity extends AppCompatActivity {
 
     private ImageView btn;
@@ -23,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        TestFairy.begin(this, "b3b1857dfc1986ee54e72d157f1d42bae2b2e981");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
